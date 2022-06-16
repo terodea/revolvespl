@@ -1,0 +1,362 @@
+ERROR:root:Path does not exist: file:/Users/akshayterode/Documents/GitHub/input_data/starter/transactions
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 10, in extract_data
+    df = spark.read.option("recursiveFileLookup", "true").json("../input_data/starter/transactions")
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/readwriter.py", line 229, in json
+    return self._df(self._jreader.json(self._spark._sc._jvm.PythonUtils.toSeq(path)))
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/utils.py", line 117, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: Path does not exist: file:/Users/akshayterode/Documents/GitHub/input_data/starter/transactions
+ERROR:root:Path does not exist: file:/Users/akshayterode/Documents/GitHub/input_data/starter/transactions
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/main.py", line 25, in run
+    shoping = self.extract.extract_data(spark, file_type="json")
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 16, in extract_data
+    raise err
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 10, in extract_data
+    df = spark.read.option("recursiveFileLookup", "true").json("../input_data/starter/transactions")
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/readwriter.py", line 229, in json
+    return self._df(self._jreader.json(self._spark._sc._jvm.PythonUtils.toSeq(path)))
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/utils.py", line 117, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: Path does not exist: file:/Users/akshayterode/Documents/GitHub/input_data/starter/transactions
+ERROR:root:option() missing 1 required positional argument: 'value'
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 12, in extract_data
+    df = spark.read.format("csv").option("inferSchema", True).option("header", True).option(f"./input_data/starter/{file_name}.csv").load()
+TypeError: option() missing 1 required positional argument: 'value'
+ERROR:root:option() missing 1 required positional argument: 'value'
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/main.py", line 26, in run
+    customers_df = self.extract.extract_data(spark, file_type="csv", file_name="customers.csv")
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 16, in extract_data
+    raise err
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 12, in extract_data
+    df = spark.read.format("csv").option("inferSchema", True).option("header", True).option(f"./input_data/starter/{file_name}.csv").load()
+TypeError: option() missing 1 required positional argument: 'value'
+ERROR:root:Path does not exist: file:/Users/akshayterode/Documents/GitHub/revolvespl/input_data/starter/customers.csv.csv
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 12, in extract_data
+    df = spark.read.format("csv").option("inferSchema", True).option("header", True).option("path",f"./input_data/starter/{file_name}.csv").load()
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/readwriter.py", line 164, in load
+    return self._df(self._jreader.load())
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/utils.py", line 117, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: Path does not exist: file:/Users/akshayterode/Documents/GitHub/revolvespl/input_data/starter/customers.csv.csv
+ERROR:root:Path does not exist: file:/Users/akshayterode/Documents/GitHub/revolvespl/input_data/starter/customers.csv.csv
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/main.py", line 26, in run
+    customers_df = self.extract.extract_data(spark, file_type="csv", file_name="customers.csv")
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 16, in extract_data
+    raise err
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/extract.py", line 12, in extract_data
+    df = spark.read.format("csv").option("inferSchema", True).option("header", True).option("path",f"./input_data/starter/{file_name}.csv").load()
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/readwriter.py", line 164, in load
+    return self._df(self._jreader.load())
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/utils.py", line 117, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: Path does not exist: file:/Users/akshayterode/Documents/GitHub/revolvespl/input_data/starter/customers.csv.csv
+ERROR:root:Table or view not found: shoping; line 3 pos 25;
+'WithCTE
+:- 'CTERelationDef 0
+:  +- 'SubqueryAlias cte
+:     +- 'Project ['s.customer_id AS customer_id#56, 'c.loyalty_score AS loyalty_score#57, 'p.product_id AS product_id#58, 'p.product_category AS product_category#59]
+:        +- 'Join Inner, ('s.basket_product_id = 'p.product_id)
+:           :- 'Join Inner, ('s.customer_id = 'c.customer_id)
+:           :  :- 'SubqueryAlias s
+:           :  :  +- 'UnresolvedRelation [shoping], [], false
+:           :  +- SubqueryAlias c
+:           :     +- SubqueryAlias customers
+:           :        +- View (`customers`, [customer_id#29,loyalty_score#30])
+:           :           +- Relation [customer_id#29,loyalty_score#30] csv
+:           +- SubqueryAlias p
+:              +- SubqueryAlias products
+:                 +- View (`products`, [product_id#49,product_description#50,product_category#51])
+:                    +- Relation [product_id#49,product_description#50,product_category#51] csv
+:- 'CTERelationDef 1
+:  +- 'SubqueryAlias sum_cte
+:     +- 'Aggregate ['customer_id], ['customer_id, 'COUNT('product_id) AS purchase_count#60]
+:        +- 'SubqueryAlias cte
+:           +- 'CTERelationRef 0, false
++- 'Sort ['customer_id ASC NULLS FIRST], true
+   +- 'Project ['c.customer_id AS customer_id#55, 'loyalty_score, 'product_id, 'product_category, 'purchase_count]
+      +- 'Join Inner, ('c.customer_id = 'sc.customer_id)
+         :- 'SubqueryAlias c
+         :  +- 'SubqueryAlias cte
+         :     +- 'CTERelationRef 0, false
+         +- 'SubqueryAlias sc
+            +- 'SubqueryAlias sum_cte
+               +- 'CTERelationRef 1, false
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/main.py", line 30, in run
+    ans = spark.sql(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/session.py", line 723, in sql
+    return DataFrame(self._jsparkSession.sql(sqlQuery), self._wrapped)
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/utils.py", line 117, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: Table or view not found: shoping; line 3 pos 25;
+'WithCTE
+:- 'CTERelationDef 0
+:  +- 'SubqueryAlias cte
+:     +- 'Project ['s.customer_id AS customer_id#56, 'c.loyalty_score AS loyalty_score#57, 'p.product_id AS product_id#58, 'p.product_category AS product_category#59]
+:        +- 'Join Inner, ('s.basket_product_id = 'p.product_id)
+:           :- 'Join Inner, ('s.customer_id = 'c.customer_id)
+:           :  :- 'SubqueryAlias s
+:           :  :  +- 'UnresolvedRelation [shoping], [], false
+:           :  +- SubqueryAlias c
+:           :     +- SubqueryAlias customers
+:           :        +- View (`customers`, [customer_id#29,loyalty_score#30])
+:           :           +- Relation [customer_id#29,loyalty_score#30] csv
+:           +- SubqueryAlias p
+:              +- SubqueryAlias products
+:                 +- View (`products`, [product_id#49,product_description#50,product_category#51])
+:                    +- Relation [product_id#49,product_description#50,product_category#51] csv
+:- 'CTERelationDef 1
+:  +- 'SubqueryAlias sum_cte
+:     +- 'Aggregate ['customer_id], ['customer_id, 'COUNT('product_id) AS purchase_count#60]
+:        +- 'SubqueryAlias cte
+:           +- 'CTERelationRef 0, false
++- 'Sort ['customer_id ASC NULLS FIRST], true
+   +- 'Project ['c.customer_id AS customer_id#55, 'loyalty_score, 'product_id, 'product_category, 'purchase_count]
+      +- 'Join Inner, ('c.customer_id = 'sc.customer_id)
+         :- 'SubqueryAlias c
+         :  +- 'SubqueryAlias cte
+         :     +- 'CTERelationRef 0, false
+         +- 'SubqueryAlias sc
+            +- 'SubqueryAlias sum_cte
+               +- 'CTERelationRef 1, false
+
+ERROR:root:Table or view not found: shoping; line 3 pos 25;
+'WithCTE
+:- 'CTERelationDef 0
+:  +- 'SubqueryAlias cte
+:     +- 'Project ['s.customer_id AS customer_id#56, 'c.loyalty_score AS loyalty_score#57, 'p.product_id AS product_id#58, 'p.product_category AS product_category#59]
+:        +- 'Join Inner, ('s.basket_product_id = 'p.product_id)
+:           :- 'Join Inner, ('s.customer_id = 'c.customer_id)
+:           :  :- 'SubqueryAlias s
+:           :  :  +- 'UnresolvedRelation [shoping], [], false
+:           :  +- SubqueryAlias c
+:           :     +- SubqueryAlias customers
+:           :        +- View (`customers`, [customer_id#29,loyalty_score#30])
+:           :           +- Relation [customer_id#29,loyalty_score#30] csv
+:           +- SubqueryAlias p
+:              +- SubqueryAlias products
+:                 +- View (`products`, [product_id#49,product_description#50,product_category#51])
+:                    +- Relation [product_id#49,product_description#50,product_category#51] csv
+:- 'CTERelationDef 1
+:  +- 'SubqueryAlias sum_cte
+:     +- 'Aggregate ['customer_id], ['customer_id, 'COUNT('product_id) AS purchase_count#60]
+:        +- 'SubqueryAlias cte
+:           +- 'CTERelationRef 0, false
++- 'Sort ['customer_id ASC NULLS FIRST], true
+   +- 'Project ['c.customer_id AS customer_id#55, 'loyalty_score, 'product_id, 'product_category, 'purchase_count]
+      +- 'Join Inner, ('c.customer_id = 'sc.customer_id)
+         :- 'SubqueryAlias c
+         :  +- 'SubqueryAlias cte
+         :     +- 'CTERelationRef 0, false
+         +- 'SubqueryAlias sc
+            +- 'SubqueryAlias sum_cte
+               +- 'CTERelationRef 1, false
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/main.py", line 30, in run
+    ans = spark.sql(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/session.py", line 723, in sql
+    return DataFrame(self._jsparkSession.sql(sqlQuery), self._wrapped)
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/utils.py", line 117, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: Table or view not found: shoping; line 3 pos 25;
+'WithCTE
+:- 'CTERelationDef 0
+:  +- 'SubqueryAlias cte
+:     +- 'Project ['s.customer_id AS customer_id#56, 'c.loyalty_score AS loyalty_score#57, 'p.product_id AS product_id#58, 'p.product_category AS product_category#59]
+:        +- 'Join Inner, ('s.basket_product_id = 'p.product_id)
+:           :- 'Join Inner, ('s.customer_id = 'c.customer_id)
+:           :  :- 'SubqueryAlias s
+:           :  :  +- 'UnresolvedRelation [shoping], [], false
+:           :  +- SubqueryAlias c
+:           :     +- SubqueryAlias customers
+:           :        +- View (`customers`, [customer_id#29,loyalty_score#30])
+:           :           +- Relation [customer_id#29,loyalty_score#30] csv
+:           +- SubqueryAlias p
+:              +- SubqueryAlias products
+:                 +- View (`products`, [product_id#49,product_description#50,product_category#51])
+:                    +- Relation [product_id#49,product_description#50,product_category#51] csv
+:- 'CTERelationDef 1
+:  +- 'SubqueryAlias sum_cte
+:     +- 'Aggregate ['customer_id], ['customer_id, 'COUNT('product_id) AS purchase_count#60]
+:        +- 'SubqueryAlias cte
+:           +- 'CTERelationRef 0, false
++- 'Sort ['customer_id ASC NULLS FIRST], true
+   +- 'Project ['c.customer_id AS customer_id#55, 'loyalty_score, 'product_id, 'product_category, 'purchase_count]
+      +- 'Join Inner, ('c.customer_id = 'sc.customer_id)
+         :- 'SubqueryAlias c
+         :  +- 'SubqueryAlias cte
+         :     +- 'CTERelationRef 0, false
+         +- 'SubqueryAlias sc
+            +- 'SubqueryAlias sum_cte
+               +- 'CTERelationRef 1, false
+
+ERROR:root:Table or view not found: shoping; line 3 pos 25;
+'WithCTE
+:- 'CTERelationDef 0
+:  +- 'SubqueryAlias cte
+:     +- 'Project ['s.customer_id AS customer_id#61, 'c.loyalty_score AS loyalty_score#62, 'p.product_id AS product_id#63, 'p.product_category AS product_category#64]
+:        +- 'Join Inner, ('s.basket_product_id = 'p.product_id)
+:           :- 'Join Inner, ('s.customer_id = 'c.customer_id)
+:           :  :- 'SubqueryAlias s
+:           :  :  +- 'UnresolvedRelation [shoping], [], false
+:           :  +- SubqueryAlias c
+:           :     +- SubqueryAlias customers
+:           :        +- View (`customers`, [customer_id#34,loyalty_score#35])
+:           :           +- Relation [customer_id#34,loyalty_score#35] csv
+:           +- SubqueryAlias p
+:              +- SubqueryAlias products
+:                 +- View (`products`, [product_id#54,product_description#55,product_category#56])
+:                    +- Relation [product_id#54,product_description#55,product_category#56] csv
+:- 'CTERelationDef 1
+:  +- 'SubqueryAlias sum_cte
+:     +- 'Aggregate ['customer_id], ['customer_id, 'COUNT('product_id) AS purchase_count#65]
+:        +- 'SubqueryAlias cte
+:           +- 'CTERelationRef 0, false
++- 'Sort ['customer_id ASC NULLS FIRST], true
+   +- 'Project ['c.customer_id AS customer_id#60, 'loyalty_score, 'product_id, 'product_category, 'purchase_count]
+      +- 'Join Inner, ('c.customer_id = 'sc.customer_id)
+         :- 'SubqueryAlias c
+         :  +- 'SubqueryAlias cte
+         :     +- 'CTERelationRef 0, false
+         +- 'SubqueryAlias sc
+            +- 'SubqueryAlias sum_cte
+               +- 'CTERelationRef 1, false
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/main.py", line 30, in run
+    ans = spark.sql(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/session.py", line 723, in sql
+    return DataFrame(self._jsparkSession.sql(sqlQuery), self._wrapped)
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/utils.py", line 117, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: Table or view not found: shoping; line 3 pos 25;
+'WithCTE
+:- 'CTERelationDef 0
+:  +- 'SubqueryAlias cte
+:     +- 'Project ['s.customer_id AS customer_id#61, 'c.loyalty_score AS loyalty_score#62, 'p.product_id AS product_id#63, 'p.product_category AS product_category#64]
+:        +- 'Join Inner, ('s.basket_product_id = 'p.product_id)
+:           :- 'Join Inner, ('s.customer_id = 'c.customer_id)
+:           :  :- 'SubqueryAlias s
+:           :  :  +- 'UnresolvedRelation [shoping], [], false
+:           :  +- SubqueryAlias c
+:           :     +- SubqueryAlias customers
+:           :        +- View (`customers`, [customer_id#34,loyalty_score#35])
+:           :           +- Relation [customer_id#34,loyalty_score#35] csv
+:           +- SubqueryAlias p
+:              +- SubqueryAlias products
+:                 +- View (`products`, [product_id#54,product_description#55,product_category#56])
+:                    +- Relation [product_id#54,product_description#55,product_category#56] csv
+:- 'CTERelationDef 1
+:  +- 'SubqueryAlias sum_cte
+:     +- 'Aggregate ['customer_id], ['customer_id, 'COUNT('product_id) AS purchase_count#65]
+:        +- 'SubqueryAlias cte
+:           +- 'CTERelationRef 0, false
++- 'Sort ['customer_id ASC NULLS FIRST], true
+   +- 'Project ['c.customer_id AS customer_id#60, 'loyalty_score, 'product_id, 'product_category, 'purchase_count]
+      +- 'Join Inner, ('c.customer_id = 'sc.customer_id)
+         :- 'SubqueryAlias c
+         :  +- 'SubqueryAlias cte
+         :     +- 'CTERelationRef 0, false
+         +- 'SubqueryAlias sc
+            +- 'SubqueryAlias sum_cte
+               +- 'CTERelationRef 1, false
+
+ERROR:root:cannot resolve 's.basket_product_id' given input columns: [s.basket, s.customer_id, c.customer_id, s.date_of_purchase, c.loyalty_score, p.product_category, p.product_description, p.product_id]; line 7 pos 31;
+'WithCTE
+:- 'CTERelationDef 0
+:  +- 'SubqueryAlias cte
+:     +- 'Project ['s.customer_id AS customer_id#61, 'c.loyalty_score AS loyalty_score#62, 'p.product_id AS product_id#63, 'p.product_category AS product_category#64]
+:        +- 'Join Inner, ('s.basket_product_id = product_id#54)
+:           :- Join Inner, (customer_id#8 = customer_id#34)
+:           :  :- SubqueryAlias s
+:           :  :  +- SubqueryAlias shoping
+:           :  :     +- View (`shoping`, [basket#14,customer_id#8,date_of_purchase#9])
+:           :  :        +- Project [basket#14, customer_id#8, date_of_purchase#9]
+:           :  :           +- Generate explode(basket#7), false, [basket#14]
+:           :  :              +- Relation [basket#7,customer_id#8,date_of_purchase#9] json
+:           :  +- SubqueryAlias c
+:           :     +- SubqueryAlias customers
+:           :        +- View (`customers`, [customer_id#34,loyalty_score#35])
+:           :           +- Relation [customer_id#34,loyalty_score#35] csv
+:           +- SubqueryAlias p
+:              +- SubqueryAlias products
+:                 +- View (`products`, [product_id#54,product_description#55,product_category#56])
+:                    +- Relation [product_id#54,product_description#55,product_category#56] csv
+:- 'CTERelationDef 1
+:  +- 'SubqueryAlias sum_cte
+:     +- 'Aggregate ['customer_id], ['customer_id, 'COUNT('product_id) AS purchase_count#65]
+:        +- 'SubqueryAlias cte
+:           +- 'CTERelationRef 0, false
++- 'Sort ['customer_id ASC NULLS FIRST], true
+   +- 'Project ['c.customer_id AS customer_id#60, 'loyalty_score, 'product_id, 'product_category, 'purchase_count]
+      +- 'Join Inner, ('c.customer_id = 'sc.customer_id)
+         :- 'SubqueryAlias c
+         :  +- 'SubqueryAlias cte
+         :     +- 'CTERelationRef 0, false
+         +- 'SubqueryAlias sc
+            +- 'SubqueryAlias sum_cte
+               +- 'CTERelationRef 1, false
+Traceback (most recent call last):
+  File "/Users/akshayterode/Documents/GitHub/revolvespl/solution/main.py", line 31, in run
+    ans = spark.sql(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/session.py", line 723, in sql
+    return DataFrame(self._jsparkSession.sql(sqlQuery), self._wrapped)
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/Users/akshayterode/Library/Python/3.8/lib/python/site-packages/pyspark/sql/utils.py", line 117, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: cannot resolve 's.basket_product_id' given input columns: [s.basket, s.customer_id, c.customer_id, s.date_of_purchase, c.loyalty_score, p.product_category, p.product_description, p.product_id]; line 7 pos 31;
+'WithCTE
+:- 'CTERelationDef 0
+:  +- 'SubqueryAlias cte
+:     +- 'Project ['s.customer_id AS customer_id#61, 'c.loyalty_score AS loyalty_score#62, 'p.product_id AS product_id#63, 'p.product_category AS product_category#64]
+:        +- 'Join Inner, ('s.basket_product_id = product_id#54)
+:           :- Join Inner, (customer_id#8 = customer_id#34)
+:           :  :- SubqueryAlias s
+:           :  :  +- SubqueryAlias shoping
+:           :  :     +- View (`shoping`, [basket#14,customer_id#8,date_of_purchase#9])
+:           :  :        +- Project [basket#14, customer_id#8, date_of_purchase#9]
+:           :  :           +- Generate explode(basket#7), false, [basket#14]
+:           :  :              +- Relation [basket#7,customer_id#8,date_of_purchase#9] json
+:           :  +- SubqueryAlias c
+:           :     +- SubqueryAlias customers
+:           :        +- View (`customers`, [customer_id#34,loyalty_score#35])
+:           :           +- Relation [customer_id#34,loyalty_score#35] csv
+:           +- SubqueryAlias p
+:              +- SubqueryAlias products
+:                 +- View (`products`, [product_id#54,product_description#55,product_category#56])
+:                    +- Relation [product_id#54,product_description#55,product_category#56] csv
+:- 'CTERelationDef 1
+:  +- 'SubqueryAlias sum_cte
+:     +- 'Aggregate ['customer_id], ['customer_id, 'COUNT('product_id) AS purchase_count#65]
+:        +- 'SubqueryAlias cte
+:           +- 'CTERelationRef 0, false
++- 'Sort ['customer_id ASC NULLS FIRST], true
+   +- 'Project ['c.customer_id AS customer_id#60, 'loyalty_score, 'product_id, 'product_category, 'purchase_count]
+      +- 'Join Inner, ('c.customer_id = 'sc.customer_id)
+         :- 'SubqueryAlias c
+         :  +- 'SubqueryAlias cte
+         :     +- 'CTERelationRef 0, false
+         +- 'SubqueryAlias sc
+            +- 'SubqueryAlias sum_cte
+               +- 'CTERelationRef 1, false
+
