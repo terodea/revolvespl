@@ -1,5 +1,12 @@
 # Revolve Solutions Data Test - Starter Project
 
+## Solution:
+Main driver code is inside **revolvespl/solution/solution_start.py**
+```bash
+cd revolvespl/
+python3 solution/solution_start.py
+```
+
 ### Prerequisites
 #### Java JDK 8
 >
